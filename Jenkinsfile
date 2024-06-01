@@ -1,4 +1,5 @@
 pipeline{
+    
     agent any
    
     tools{
@@ -8,12 +9,14 @@ pipeline{
         stage('build'){
             
             steps{
-                sh 'mvn compile' 
+                echo 'compiling the voting app...'
+                dir('voting'{
+                sh 'mvn compile'
+                }
             }
             
         }
     
-   
         stage('test'){
             
             steps{

@@ -10,7 +10,7 @@ pipeline{
             
             steps{
                 echo 'compiling the voting app...'
-                dir('voting'{
+                dir('carts'){
                 sh 'mvn compile'
                 }
             }
